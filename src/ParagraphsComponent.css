@@ -1,0 +1,9 @@
+.paragraphsComponent {
+    width: 300px;
+}
+
+.paragraphsComponent p {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
