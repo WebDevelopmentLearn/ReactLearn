@@ -1,0 +1,28 @@
+
+.shoppingListContainer {
+    background-color: gray;
+    width: max-content;
+    padding: 10px;
+}
+
+.shoppingListContainer > ul li {
+    list-style: none;
+    padding: 5px;
+    transition: all 0.5s ease;
+    border-radius: 8px;
+    display: flex;
+
+}
+
+.itemContainer {
+
+    display: flex;
+    flex-direction: column;
+}
+
+.shoppingListContainer > ul li:hover {
+    background-color: #afadad;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px 10px #7216a022;
+
+}

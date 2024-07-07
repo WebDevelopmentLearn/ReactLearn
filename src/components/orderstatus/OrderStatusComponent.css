@@ -1,0 +1,31 @@
+
+.orderStatusContainer {
+    width: max-content;
+    padding: 5px;
+    /*margin-bottom: 10px;*/
+}
+
+.orderStatusContainer {
+    background-color: gray;
+    transition: all 0.5s ease;
+
+}
+
+.orderStatusContainer:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px 4px #646262;
+}
+
+.orderStatusContainer:hover.success {
+    /*background-color: green;*/
+    box-shadow: 0px 0px 10px 4px rgba(88, 229, 203, 0.75);
+}
+
+.orderStatusContainer:hover.ways {
+    box-shadow: 0px 0px 10px 4px rgba(190, 204, 58, 0.75);
+}
+
+.orderStatusContainer:hover.delivered {
+    box-shadow: 0px 0px 10px 4px rgba(34, 248, 2, 0.75);
+}
+
