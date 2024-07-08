@@ -1,0 +1,12 @@
+
+.RatingContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ratingImg {
+    max-width: 600px;
+    max-height: 300px;
+}
