@@ -20,18 +20,21 @@ function List() {
     }
 
     return (
-        <ul>
-            {peoples.map((people, index) => (
-                <li key={index}>
-                    <div>
-                        <h3>{people.name}</h3>
+        <div className={styles.ListContainer}>
+            <ul className={styles.peopleList}>
+                {peoples.map((people, index) => (
+                    <li key={index}>
+                        <h3>Name: {people.name}</h3>
                         <p>Age: {people.age}</p>
-                        <button onClick={() => {removeUser(index)}}>Удалить пользователя</button>
-                    </div>
-                </li>
-            ))}
+                        <button onClick={() => {
+                            removeUser(index)
+                        }}>Удалить пользователя
+                        </button>
+                    </li>
+                ))}
 
-        </ul>
+            </ul>
+        </div>
     )
 }
 
