@@ -7,7 +7,7 @@ function Rating() {
 
     return (
         <div className={styles.RatingContainer}>
-            <h1 className={styles.ratingHeader}>Оценка данного технологического шедевра</h1>
+            <h1 className={styles.ratingHeader}>Оценка данного приложения</h1>
             <div className={styles.StarsContainer}>
                 <svg width="36" height="36" viewBox="0 0 16 16" className={`${styles.star} ${rating >= 0 ? styles.active : ""}`}
                      fill={rating >= 0 ? "rgb(255, 186, 5)" : ""}>
