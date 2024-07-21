@@ -1,22 +1,16 @@
-// import logo from './logo.svg';
 import './App.css';
-
-import CitySelector from "../components/CitySelector/CitySelector";
-import {useState} from "react";
-import CityCard from "../components/CityCard/CityCard";
-import MathQuiz from "../components/MathQuiz/MathQuiz";
+import SpotifyLogo from "../components/SpotifyLogo/SpotifyLogo";
+import Header from "../components/Header/Header";
+import SignIn from "../components/SignIn/SignIn";
+import LinksContainer from "../components/LinksContainer/LinksContainer";
 
 function App() {
-    const [currentCity, setCity] = useState();
-    function updateCity (newCity) {
-        setCity(newCity);
-    };
     return (
       <div className="App">
-          <CitySelector updateCity={updateCity} />
-          {currentCity ? <CityCard selectedCity={currentCity} /> : <h1>Город не выбран</h1> }
-
-          <MathQuiz />
+          <SpotifyLogo />
+          <Header />
+          <SignIn />
+          <LinksContainer />
       </div>
   );
 }
