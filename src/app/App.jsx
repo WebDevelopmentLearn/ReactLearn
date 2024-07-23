@@ -1,16 +1,13 @@
 import './App.css';
-import SpotifyLogo from "../components/SpotifyLogo/SpotifyLogo";
-import Header from "../components/Header/Header";
-import SignIn from "../components/SignIn/SignIn";
-import LinksContainer from "../components/LinksContainer/LinksContainer";
+import UserProfile from "../components/UserProfileContainer/UserProfile/UserProfile";
+import Navbar from "../components/Navbar/Navbar";
+import UserProfileContainer from "../components/UserProfileContainer/UserProfileContainer";
 
 function App() {
     return (
       <div className="App">
-          <SpotifyLogo />
-          <Header />
-          <SignIn />
-          <LinksContainer />
+          <Navbar />
+          <UserProfileContainer />
       </div>
   );
 }
