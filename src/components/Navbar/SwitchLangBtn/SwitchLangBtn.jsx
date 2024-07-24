@@ -11,7 +11,7 @@ function SwitchLangBtn() {
 
     return (
         <button className={styles.SwitchLangBtn} onClick={switchLang}>
-            {lang === "ru" ? "EN" : "RU"}
+            {lang === "ru" ? "RU" : "EN"}
         </button>
     )
 }
