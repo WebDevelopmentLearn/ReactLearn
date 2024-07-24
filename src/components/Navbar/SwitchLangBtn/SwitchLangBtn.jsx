@@ -1,16 +1,19 @@
-import {useContext} from "react";
+import {useContext, useState} from "react";
 import LangContext from "../../../contexts/LangContext";
+import styles from "./SwitchLangBtn.module.css";
 
-export function SwitchLangBtn() {
-    const lang = useContext(LangContext);
+function SwitchLangBtn() {
+    const {lang, setLang} = useContext(LangContext);
 
     function switchLang() {
-
+        lang === "ru" ? setLang("en") : setLang("ru");
     }
 
     return (
-        <button>
-            L
+        <button className={styles.SwitchLangBtn} onClick={switchLang}>
+            {lang === "ru" ? "EN" : "RU"}
         </button>
     )
 }
+
+export default SwitchLangBtn;

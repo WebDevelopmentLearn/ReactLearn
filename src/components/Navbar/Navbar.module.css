@@ -38,7 +38,13 @@ nav {
     border-radius: 8px;
     background-color: #ffffff;
     text-decoration: inherit;
-    transition: all 0.5s;
+    transition: background-color 0.5s, transform 0.5s;
+}
+
+.githubSourceBtn:hover {
+    background-color: #d3d2d2;
+    transform: scale(1.1);
+
 }
 
 .githubSpan {

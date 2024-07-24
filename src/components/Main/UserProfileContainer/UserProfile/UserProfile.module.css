@@ -4,8 +4,18 @@
     flex-direction: column;
     gap: 16px;
     align-items: center;
+    background-color: #606060;
 
 }
+
+.UserInfoContainer {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    margin-bottom: 16px;
+}
+
 .SkillsList {
     display: flex;
     flex-direction: row;

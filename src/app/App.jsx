@@ -1,13 +1,20 @@
 import './App.css';
-import UserProfile from "../components/UserProfileContainer/UserProfile/UserProfile";
 import Navbar from "../components/Navbar/Navbar";
-import UserProfileContainer from "../components/UserProfileContainer/UserProfileContainer";
+import Main from "../components/Main/Main";
+import LangContext from "../contexts/LangContext";
+import {useState} from "react";
 
 function App() {
+    const [lang, setLang] = useState("ru");
     return (
       <div className="App">
-          <Navbar />
-          <UserProfileContainer />
+          <LangContext.Provider value={{lang, setLang}}>
+              <Navbar />
+          </LangContext.Provider>
+
+          <LangContext.Provider value={lang}>
+              <Main />
+          </LangContext.Provider>
       </div>
   );
 }

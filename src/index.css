@@ -6,4 +6,11 @@
 
 html {
   font-size: 10px;
+  background-color: #3b3b3b;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }

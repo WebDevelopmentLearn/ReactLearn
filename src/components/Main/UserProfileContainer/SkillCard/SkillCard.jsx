@@ -1,30 +1,23 @@
 
 import styles from "./SkillCard.module.css";
-import {langObj} from "../../../utils/Utils.js";
+import {langObj} from "../../../../utils/Utils.js";
+import {useContext} from "react";
+import LangContext from "../../../../contexts/LangContext";
 function SkillCard({skill, language}) {
-    // langContainer.style.border = `1px solid ${data.color}`;
-// langContainer.style.boxShadow = `0px 0px 10px ${data.color}`;
-//
-// langContainer.addEventListener("pointerover", (event) => {
-//     langContainer.style.boxShadow = `0px 0px 30px ${data.color}`;
-//     langContainer.style.border = `2px solid ${data.color}`;
-// });
-// langContainer.addEventListener("pointerout", (event) => {
-//     langContainer.style.boxShadow = `0px 0px 10px ${data.color}`;
-//     langContainer.style.border = `1px solid ${data.color}`;
-// });
+    const lang = useContext(LangContext);
+
     function handleHover(event) {
-        console.log(langObj);
+        // console.log(langObj);
         switch (event.type) {
             case "pointerover":
                 event.currentTarget.style.boxShadow = `0px 0px 30px ${skill.color}`;
                 event.currentTarget.style.border = `2px solid ${skill.color}`;
-                console.log("test")
+                // console.log("test")
                 break;
             case "pointerout":
                 event.currentTarget.style.boxShadow = `0px 0px 10px ${skill.color}`;
                 event.currentTarget.style.border = `1px solid ${skill.color}`;
-                console.log("test2")
+                // console.log("test2")
                 break;
 
         }
@@ -46,9 +39,9 @@ function SkillCard({skill, language}) {
                 <h3>{langName}</h3>
             </div>
             <div className={styles.infoCard}>
-                <p>Ранг: {skill.name}</p>
-                <p>Очков: {skill.score}</p>
-                <p>Цвет: {skill.color}</p>
+                <p>{lang === "ru" ? "Ранг" : "Rank"}: {skill.name}</p>
+                <p>{lang === "ru" ? "Очков" : "Score"}: {skill.score}</p>
+                <p>{lang === "ru" ? "Цвет" : "Color"}: {skill.color}</p>
             </div>
         </div>
     )
