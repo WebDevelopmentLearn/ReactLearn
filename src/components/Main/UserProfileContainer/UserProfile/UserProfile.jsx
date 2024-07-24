@@ -49,7 +49,7 @@ function UserProfile() {
         }
 
     }
-
+    //g964
 
     if (isLoading) {
         return <Loader />;
@@ -70,8 +70,8 @@ function UserProfile() {
             <div>
                 {skillsList.length > 0 ?
                     <div className={styles.UserInfoContainer}>
-                        <h1>Имя пользователя: {username}</h1>
-                        <h2>Общие очки: {honor}</h2>
+                        <h1>{lang === "ru" ? "Имя пользователя" : "Username"}: {username}</h1>
+                        <h2>{lang === "ru" ? "Общие очки" : "Total Score"}: {honor}</h2>
                     </div> : null}
                 <div className={styles.SkillsList}>
                     {skillsList ? skillsList.map(([lang, skill]) =>
