@@ -1,8 +1,9 @@
 
-import styles from "./SkillCard.module.css";
+import styles from "./SkillCard.module.scss";
 import {langObj} from "../../../../utils/Utils.js";
 import {useContext} from "react";
 import LangContext from "../../../../contexts/LangContext";
+
 function SkillCard({skill, language}) {
     const lang = useContext(LangContext);
 
@@ -46,14 +47,6 @@ function SkillCard({skill, language}) {
         </div>
     )
 }
-
-
-
-// elementsObj.lang.textContent = langName;
-// elementsObj.rankType.textContent += data.name;
-// elementsObj.rank.textContent += data.rank;
-// elementsObj.score.textContent += data.score;
-// elementsObj.color.textContent += data.color;
 
 
 export default SkillCard;

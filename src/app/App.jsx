@@ -10,11 +10,12 @@ function App() {
       <div className="App">
           <LangContext.Provider value={{lang, setLang}}>
               <Navbar />
-          </LangContext.Provider>
-
-          <LangContext.Provider value={lang}>
               <Main />
           </LangContext.Provider>
+
+          {/*<LangContext.Provider value={lang}>*/}
+          {/*    */}
+          {/*</LangContext.Provider>*/}
       </div>
   );
 }

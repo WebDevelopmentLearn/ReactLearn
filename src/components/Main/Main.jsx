@@ -1,5 +1,5 @@
 import UserProfileContainer from "./UserProfileContainer/UserProfileContainer";
-import styles from "./Main.module.css";
+import styles from "./Main.module.scss";
 import AboutContainer from "./AboutContainer/AboutContainer";
 
 function Main() {

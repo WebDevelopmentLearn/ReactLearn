@@ -1,4 +1,4 @@
-import {useState, useEffect, useContext} from "react";
+import {useState, useContext} from "react";
 import axios  from "axios";
 import styles from "./UserProfile.module.css";
 import SkillCard from "../SkillCard/SkillCard";
@@ -13,7 +13,7 @@ function UserProfile() {
     const [username, setUsername] = useState("");
     const [isLoading, setIsLoading] = useState(false);
 
-    const lang = useContext(LangContext);
+    const {lang} = useContext(LangContext);
 
     const fetchUserStats = async () => {
         setIsLoading(true); // Set loader to active
@@ -40,9 +40,11 @@ function UserProfile() {
         event.preventDefault();
         const data = await fetchUserStats();
         if (data) {
+            const ranks = data.ranks;
+            let honor = data.honor;
             setUsername(data.username);
-            setHonor(data.honor);
-            setSkillsList(data.ranks.languages);
+            setHonor(honor);
+            setSkillsList(ranks.languages);
         } else {
             alert("Пользователь не найден");
             setSkillsList({});

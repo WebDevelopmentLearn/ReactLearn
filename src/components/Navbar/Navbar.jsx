@@ -10,7 +10,9 @@ function Navbar() {
             </div>
             <div style={{display: "flex", gap: "10px"}}>
                 <a className={styles.githubSourceBtn} href="https://github.com/WebDevelopmentLearn/CodeWarsAPI"
-                   target="_blank">
+                   target="_blank"
+                   rel="noreferrer"
+                >
                     <img className={styles.githubLogo} src="assets/github_logo_dark.svg" alt="github_logo"/>
                     <span className={styles.githubSpan}>GitHub</span>
                 </a>
