@@ -1,8 +1,16 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 function ListItems() {
     const [inputValue, changeInputValue] = useState('');
     const [items, setItems] = useState([]);
+
+    useEffect(() => {
+        console.log(`Компонент обновлен. Текущий список: ${items}`);
+    }, [items]);
+
+    useEffect(() => {
+        console.log("Компонент создан");
+    }, []);
 
     function addItem(event) {
         event.preventDefault();
