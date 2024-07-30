@@ -1,12 +1,13 @@
 import './App.css';
-import ListItems from "../components/ListItems/ListItems";
+import {DynamicForm} from "../components/DynamicForm/DynamicForm";
+
 
 
 function App() {
 
     return (
       <div className="App">
-          <ListItems />
+          <DynamicForm />
       </div>
   );
 }
