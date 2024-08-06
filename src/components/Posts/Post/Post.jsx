@@ -1,8 +1,15 @@
 import {Navbar} from "../../Navbar/Navbar";
-import {useLocation} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
+import LangContext from "../../../context/LangContext";
+import {useContext} from "react";
 
 export function Post() {
     const location = useLocation();
+
+    const navigate = useNavigate();
+
+    //Контекст
+    const {lang} = useContext(LangContext);
     console.log(location);
     return (
         <div>
@@ -13,7 +20,7 @@ export function Post() {
                 <p>{location?.state?.postBody}</p>
                 <p>{location?.state?.postId}</p>
                 <p>{location?.state?.postCreatedAt}</p>
-
+                <button onClick={() => navigate(`/posts/${location?.state?.page}`)}>{lang === "ru" ? "Вернуться к постам" : "Return to posts"}</button>
             </div>
         </div>
     )

@@ -16,7 +16,7 @@ export function Posts() {
     const {lang} = useContext(LangContext);
 
     //Параметры из URL
-    const {pageId, post_} = useParams();
+    const {pageId} = useParams();
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -44,12 +44,13 @@ export function Posts() {
 
     function handleOpenPost(post) {
         //"/about?userId=3"
-        navigate(`/posts/${post.id}`, {
+        navigate(`/posts/post/${post.id}`, {
             state: {
                 postId: post.id,
                 postTitle: post.title,
                 postBody: post.body,
-                postCreatedAt: formatDate(post.createdAt)
+                postCreatedAt: formatDate(post.createdAt),
+                page: page
             }
         });
     }

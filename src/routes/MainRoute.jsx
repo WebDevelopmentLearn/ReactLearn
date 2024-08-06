@@ -8,7 +8,5 @@ export const MainRoute = () => <Routes>
     <Route path="/about" element={<About />} />
     <Route path="/profile/:module/:userId" element={<Profile />} />
     <Route path="/posts/:pageId" element={<Posts />} />
-    <Route path="/posts/:postId" element={<Post />} />
+    <Route path="/posts/post/:postId" element={<Post />} />
 </Routes>
-//    <Route path="/profile/:module/:userId" element={<Profile />} />
-//http://localhost:3001/profile/applications/1
