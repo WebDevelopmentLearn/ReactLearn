@@ -1,14 +1,27 @@
 import axios from 'axios';
 
-export const fetchCatImage = async () => {
+
+//https://66aa68ca613eced4eba8b3ab.mockapi.io/api/posts
+
+
+
+export const fetchPosts = async (page) => {
+    const limit = 3;
     try {
-        const response = await axios.get('https://api.thecatapi.com/v1/images/search', {
-            headers: { "Access-Control-Allow-Origin": "*"}
-        });
-        console.log('Cat image fetched', response.data[0]);
-        return response.data[0];
-    } catch (error) {
-        console.error('Failed to fetch cat image', error);
-        return false;
+        const response = await axios.get(`https://66aa68ca613eced4eba8b3ab.mockapi.io/api/posts?page=${page}&limit=${limit}`);
+        const isLastPage = response.data.length < limit;
+        return {data: response.data, isLastPage: isLastPage};
+    } catch (e) {
+        console.error(e);
+        return { data: false, isLastPage: false };
+    }
+}
+
+
+export const deletePost = async (id) => {
+    try {
+        await axios.delete(`https://66aa68ca613eced4eba8b3ab.mockapi.io/api/posts/${id}`);
+    } catch (e) {
+        console.error(e);
     }
 }

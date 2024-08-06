@@ -1,0 +1,44 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  align-items: center;
+  margin-bottom: 5px;
+  padding: 10px 6px;
+  background-color: #606060;
+  border-radius: 16px;
+}
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+
+
+.headerContainer img {
+  width: 50px;
+  height: 50px;
+}
+
+.ProfileAndSwitchLangContainer {
+  display: flex;
+  flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+}
+.navLink {
+  font-size: 20px;
+
+  text-decoration: none;
+}
+
+.active {
+  color: #8a61ea;
+  font-size: 20px;
+}

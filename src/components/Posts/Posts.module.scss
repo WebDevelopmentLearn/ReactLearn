@@ -1,0 +1,65 @@
+
+.PostsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 10px;
+  background-color: #606060;
+  border-radius: 16px;
+
+
+}
+
+.postContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 20px;
+    //margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+
+  position: relative;
+}
+
+.postTitle {
+  font-size: 24px;
+  font-weight: 600;
+  position: absolute;
+  top: 4px;
+  left: 10px;
+
+}
+
+.postCreatedAt {
+  position: absolute;
+  top: 4px;
+  right: 10px;
+}
+
+.postId {
+  position: absolute;
+  bottom: 0;
+    right: 10px;
+}
+
+.btn {
+  background-color: #6c52d9;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background-color: #7354f9;
+}

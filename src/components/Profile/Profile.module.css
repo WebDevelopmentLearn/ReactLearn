@@ -1,0 +1,27 @@
+.ProfileContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 0;
+  background-color: #606060;
+  border-radius: 16px;
+}
+
+.btn {
+  background-color: #6c52d9;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background-color: #7354f9;
+}
+
+/*# sourceMappingURL=Profile.module.css.map */
