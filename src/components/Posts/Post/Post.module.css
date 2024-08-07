@@ -16,7 +16,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
   padding: 8px;
 }
 .authorInfo img {
@@ -31,7 +30,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  border: 1px solid red;
   padding: 8px;
 }
 
