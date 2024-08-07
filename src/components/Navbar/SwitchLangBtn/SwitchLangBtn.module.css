@@ -1,0 +1,20 @@
+.SwitchLangBtn {
+  background-color: #3b3b3b;
+  border: none;
+  outline: none;
+  padding: 4px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #ffffff;
+  transition: color 0.5s;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.SwitchLangBtn:hover {
+  color: #8a61ea;
+}
+
+/*# sourceMappingURL=SwitchLangBtn.module.css.map */

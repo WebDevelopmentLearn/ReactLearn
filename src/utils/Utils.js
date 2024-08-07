@@ -1,5 +1,5 @@
 
-export function formatDate(isoString) {
+export function formatDate(isoString, lang) {
     const date = new Date(isoString);
 
     // Опции для локализации даты
@@ -14,7 +14,7 @@ export function formatDate(isoString) {
     };
 
     // Форматирование даты в локализованный формат
-    const formattedDate = date.toLocaleString('ru-RU', options);
+    const formattedDate = date.toLocaleString(lang === "ru" ? 'ru-RU' : "en-EN", options);
 
     return formattedDate;
 }

@@ -11,9 +11,9 @@ export function Profile() {
         <div>
             <Navbar />
             <div className={styles.ProfileContainer}>
-                <h1>Profile page</h1>
-                <p>User ID: {userId}</p>
-                <p>Module: {module}</p>
+                <h1 style={{fontSize: "32px"}}>{lang === "ru" ? "Профиль" : "Profile page"}</h1>
+                <p>{lang === "ru" ? "Номер пользователя" : "User ID"}: {userId}</p>
+                <p>{lang === "ru" ? "Модуль" : "Module"}: {module}</p>
                 <button className={styles.btn}
                         onClick={() => navigate("/")}>{lang === "ru" ? "Вернуться на главную" : "Back to Home page"}</button>
 

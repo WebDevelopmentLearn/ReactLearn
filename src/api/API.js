@@ -17,6 +17,16 @@ export const fetchPosts = async (page) => {
     }
 }
 
+export const fetchPost = async (id) => {
+    try {
+        const response = await axios.get(`https://66aa68ca613eced4eba8b3ab.mockapi.io/api/posts/${id}`);
+        return response.data;
+    } catch (e) {
+        console.error(e);
+        return false;
+    }
+}
+
 
 export const deletePost = async (id) => {
     try {

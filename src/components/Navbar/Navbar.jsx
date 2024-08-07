@@ -1,40 +1,36 @@
 import styles from "./Navbar.module.css";
 import {NavLink} from "react-router-dom";
 import {SwitchLangBtn} from "./SwitchLangBtn/SwitchLangBtn";
+import LangContext from "../../context/LangContext";
+import {useContext} from "react";
 
 export function Navbar() {
+
+    const {lang} = useContext(LangContext);
+
     return (
         <nav>
             <div className={styles.headerContainer}>
-                {/*<img src="assets/codewars-logo.svg" alt="codewars_logo"/>*/}
                 <h1 className={styles.codewarsHeader}>SOME LOGO</h1>
             </div>
-            <div style={{display: "flex", gap: "10px", justifyContent: "center", alignItems: "center"}}>
-                {/*<a className={styles.githubSourceBtn} href="https://github.com/WebDevelopmentLearn/CodeWarsAPI"*/}
-                {/*   target="_blank"*/}
-                {/*   rel="noreferrer"*/}
-                {/*>*/}
-                {/*    <img className={styles.githubLogo} src="assets/github_logo_dark.svg" alt="github_logo"/>*/}
-                {/*    <span className={styles.githubSpan}>GitHub</span>*/}
-                {/*</a>*/}
-                {/*<SwitchLangBtn/>*/}
+            <div style={{display: "flex", gap: "10px", justifyContent: "center", alignItems: "center", textAlign: "center"}}>
                 <NavLink
                     to={"/"}
                     className={({isActive}) =>
                         isActive ? styles.active : styles.navLink
                     }
-                >Home</NavLink>
+                >{lang === "ru" ? "Главная" : "Home"}</NavLink>
                 <NavLink
                     to={"/about"}
                     className={({isActive}) =>
                         isActive ? styles.active : styles.navLink
-                    }>About
+                    }>{lang === "ru" ? "О нас" : "About us"}
                 </NavLink>
                 <NavLink
                     to={"/posts/1"}
                     className={({isActive}) =>
                         isActive ? styles.active : styles.navLink
-                    }>Posts
+                    }>{lang === "ru" ? "Посты" : "Posts"}
                 </NavLink>
 
             </div>
@@ -44,7 +40,7 @@ export function Navbar() {
                     className={({isActive}) =>
                         isActive ? styles.active : styles.navLink
                     }
-                >Profile</NavLink>
+                >{lang === "ru" ? "Профиль" : "Profile"}</NavLink>
                 <SwitchLangBtn/>
             </div>
 

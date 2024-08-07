@@ -3,13 +3,13 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-
   align-items: center;
   margin-bottom: 5px;
   padding: 10px 6px;
   background-color: #606060;
   border-radius: 16px;
 }
+
 .headerContainer {
   display: flex;
   flex-direction: row;
@@ -17,8 +17,6 @@ nav {
   align-items: center;
   gap: 5px;
 }
-
-
 
 .headerContainer img {
   width: 50px;
@@ -28,14 +26,13 @@ nav {
 .ProfileAndSwitchLangContainer {
   display: flex;
   flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
+
 .navLink {
   font-size: 20px;
-
   text-decoration: none;
 }
 
@@ -43,3 +40,5 @@ nav {
   color: #8a61ea;
   font-size: 20px;
 }
+
+/*# sourceMappingURL=Navbar.module.css.map */
