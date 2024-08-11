@@ -32,6 +32,12 @@ export function Navbar() {
                         isActive ? styles.active : styles.navLink
                     }>{lang === "ru" ? "Посты" : "Posts"}
                 </NavLink>
+                <NavLink
+                    to={"/valuedisplay"}
+                    className={({isActive}) =>
+                        isActive ? styles.active : styles.navLink
+                    }>{lang === "ru" ? "Value Display" : "Отображение значений"}
+                </NavLink>
 
             </div>
             <div className={styles.ProfileAndSwitchLangContainer}>
