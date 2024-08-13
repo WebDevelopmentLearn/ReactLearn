@@ -1,5 +1,5 @@
 import {Routes, Route} from "react-router-dom";
-import {Home, About, Profile, Posts, Post, ValueDisplay} from "../components";
+import {Home, About, Profile, Posts, Post, ValueDisplay, UsersList} from "../components";
 
 export const MainRoute = () => <Routes>
     <Route path="/" element={<Home />} />
@@ -8,4 +8,5 @@ export const MainRoute = () => <Routes>
     <Route path="/posts/:pageId" element={<Posts />} />
     <Route path="/posts/post/:postId" element={<Post />} />
     <Route path="/valuedisplay" element={<ValueDisplay />} />
+    <Route path="/userslist" element={<UsersList />} />
 </Routes>

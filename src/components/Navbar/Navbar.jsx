@@ -38,6 +38,12 @@ export function Navbar() {
                         isActive ? styles.active : styles.navLink
                     }>{lang === "ru" ? "Отображение значений" : "Value Display"}
                 </NavLink>
+                <NavLink
+                    to={"/userslist"}
+                    className={({isActive}) =>
+                        isActive ? styles.active : styles.navLink
+                    }>{lang === "ru" ? "Список пользователей" : "Users List"}
+                </NavLink>
 
             </div>
             <div className={styles.ProfileAndSwitchLangContainer}>
