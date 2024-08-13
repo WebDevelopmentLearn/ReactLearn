@@ -36,7 +36,7 @@ export function Navbar() {
                     to={"/valuedisplay"}
                     className={({isActive}) =>
                         isActive ? styles.active : styles.navLink
-                    }>{lang === "ru" ? "Value Display" : "Отображение значений"}
+                    }>{lang === "ru" ? "Отображение значений" : "Value Display"}
                 </NavLink>
 
             </div>
