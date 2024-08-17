@@ -1,0 +1,58 @@
+.TodoListContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 50px 0;
+  background-color: #606060;
+  border-radius: 16px;
+}
+
+.taskContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 16px;
+  border: 1px solid #ccc;
+}
+
+.taskInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.isComplete {
+  text-decoration: line-through;
+}
+
+.btn {
+  background-color: #6c52d9;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background-color: #7354f9;
+}
+
+.btn:active {
+  transform: scale(0.95);
+  background-color: #c91010;
+}
+
+.btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/*# sourceMappingURL=TodoList.module.css.map */

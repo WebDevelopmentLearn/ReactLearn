@@ -17,7 +17,8 @@ export default [
       'react/no-unused-state': 'warn',
       "react/prop-types": "off",
       'react/react-in-jsx-scope': 'off',
-      "react/no-unescaped-entities": "off"
+      "react/no-unescaped-entities": "off",
+      "react/no-case-declarations": "off"
     },
   },
 ];

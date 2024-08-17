@@ -5,3 +5,7 @@ export {Posts} from "./Posts/Posts";
 export {Post} from "./Posts/Post/Post";
 export {ValueDisplay} from "./ValueDisplay/ValueDisplay";
 export {UsersList} from "./UsersList/UsersList";
+export {Notes} from "./Notes/Notes";
+export {Timer} from "./Timer/Timer";
+export {Modal} from "./Modal/Modal";
+export {TodoList} from "./TodoList/TodoList";

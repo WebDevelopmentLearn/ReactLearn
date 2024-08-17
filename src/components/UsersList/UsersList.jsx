@@ -10,10 +10,13 @@ export function UsersList() {
     const dispatch = useDispatch();
     const originalUsers = useSelector((state) => state.users.originalUsers);
     const filteredUsers = useSelector((state) => state.users.filteredUsers);
+    const filter = useSelector((state) => state.users.filter);
     const onInput = (event) => {
         const searchValue = event.target.value;
         dispatch(searchUser(searchValue));
     }
+
+    console.log(filter);
 
     return (
         <div>
@@ -23,7 +26,7 @@ export function UsersList() {
 
                 <input type="text" onInput={(e) => onInput(e)}/>
                 <ul style={{listStyle: "none"}}>
-                    {(filteredUsers.length > 0 ? filteredUsers : originalUsers).map((user, idx) => (
+                    {(filter ? filteredUsers : originalUsers).map((user, idx) => (
                         <li key={idx}>
                             <div className={styles.userContainer}>
                                 <p>{user}</p>

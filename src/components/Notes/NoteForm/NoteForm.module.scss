@@ -1,0 +1,69 @@
+.NotesCreateForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.NotesCreateFormEdit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.NotesCreateForm input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+
+  transition: outline 0.3s;
+  &:focus {
+    outline: 2px solid #6c52d9;
+  }
+}
+
+.NotesCreateForm textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+
+  transition: outline 0.3s;
+  &:focus {
+    outline: 2px solid #6c52d9;
+  }
+}
+
+
+.input {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 250px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: rgb(176, 133, 215);
+  border: none;
+  padding: 5px;
+  color: azure;
+}
+
+.btn {
+  background-color: #6c52d9;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background-color: #7354f9;
+}

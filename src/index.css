@@ -19,3 +19,8 @@ body {
   flex-direction: column;
   gap: 10px;
 }
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
