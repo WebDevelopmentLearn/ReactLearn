@@ -9,3 +9,4 @@ export {Notes} from "./Notes/Notes";
 export {Timer} from "./Timer/Timer";
 export {Modal} from "./Modal/Modal";
 export {TodoList} from "./TodoList/TodoList";
+export {UserProfile} from "./UserProfile/UserProfile";

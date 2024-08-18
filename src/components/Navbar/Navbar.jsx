@@ -93,6 +93,13 @@ export function Navbar() {
                                 isActive ? styles.active : styles.navLink
                             }>{lang === "ru" ? "Заметки" : "Notes"}
                         </NavLink>
+
+                        <NavLink
+                            to={"/userprofile"}
+                            className={({isActive}) =>
+                                isActive ? styles.active : styles.navLink
+                            }>{lang === "ru" ? "Профиль пользователя" : "User Profile"}
+                        </NavLink>
                     </div>
 
                 </ul>

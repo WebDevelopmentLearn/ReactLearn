@@ -1,0 +1,53 @@
+.UserProfileContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 50px 0;
+  background-color: #606060;
+  border-radius: 16px;
+}
+
+.UserInformationContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 600;
+
+  }
+
+}
+
+.UserProfileForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+
+.btn {
+  background-color: #6c52d9;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background-color: #7354f9;
+}

@@ -1,5 +1,10 @@
 import {combineReducers} from "@reduxjs/toolkit";
 
+const userInfoInitialState = {
+    name: "",
+    status: ""
+}
+
 const counterInitialState = {
     counter: 0,
 }
@@ -22,7 +27,20 @@ const usersInitialState = {
 }
 
 
+const userInfoReducer = (state = userInfoInitialState, action) => {
+    switch (action.type) {
+        case "SET_USER_INFO":
+            return {
+                ...state,
+                name: action.payload.name,
+                status: action.payload.status
 
+            }
+
+        default:
+            return state;
+    }
+}
 
 const todoReducer = (state = todoInitialState, action) => {
     switch (action.type) {
@@ -129,6 +147,7 @@ export const rootReducer = combineReducers({
     counter: counterReducer,
     tasks: todoReducer,
     users: userReducer,
-    notes: notesReducer
+    notes: notesReducer,
+    userInfo: userInfoReducer
 });
 

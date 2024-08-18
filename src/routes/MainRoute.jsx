@@ -1,5 +1,17 @@
 import {Routes, Route} from "react-router-dom";
-import {Home, About, Profile, Posts, Post, ValueDisplay, UsersList, Notes, Timer, TodoList} from "../components";
+import {
+    Home,
+    About,
+    Profile,
+    Posts,
+    Post,
+    ValueDisplay,
+    UsersList,
+    Notes,
+    Timer,
+    TodoList,
+    UserProfile
+} from "../components";
 import Counter from "../components/Counter/Counter";
 
 export const MainRoute = () => <Routes>
@@ -14,4 +26,5 @@ export const MainRoute = () => <Routes>
     <Route path="/timer" element={<Timer />} />
     <Route path="/counter" element={<Counter />} />
     <Route path="/notes" element={<Notes />} />
+    <Route path="/userprofile" element={<UserProfile />} />
 </Routes>
