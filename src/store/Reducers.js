@@ -18,9 +18,28 @@ const todoInitialState = {
 }
 
 const usersInitialState = {
+    // originalUsers: [
+    //     "Alex", "John", "Jane", "Doe", "Smith", "Marry", "Tom", "Jerry", "Harry", "Ron",
+    //     "Hermione", "Ginny", "Luna", "Neville", "Fred", "George", "Percy",
+    // ],
     originalUsers: [
-        "Alex", "John", "Jane", "Doe", "Smith", "Marry", "Tom", "Jerry", "Harry", "Ron",
-        "Hermione", "Ginny", "Luna", "Neville", "Fred", "George", "Percy",
+        {id: 0, name: "Alex"},
+        {id: 1, name: "John"},
+        {id: 2, name: "Jane"},
+        {id: 3, name: "Doe"},
+        {id: 4, name: "Smith"},
+        {id: 5, name: "Marry"},
+        {id: 6, name: "Tom"},
+        {id: 7, name: "Jerry"},
+        {id: 8, name: "Harry"},
+        {id: 9, name: "Ron"},
+        {id: 10, name: "Hermione"},
+        {id: 11, name: "Ginny"},
+        {id: 12, name: "Luna"},
+        {id: 13, name: "Neville"},
+        {id: 14, name: "Fred"},
+        {id: 15, name: "George"},
+        {id: 16, name: "Percy"}
     ],
     filteredUsers: [],
     filter: ""
@@ -135,7 +154,9 @@ const userReducer = (state = usersInitialState, action) => {
         case "SEARCH_USER":
             return {
                 ...state,
-                filteredUsers: state.originalUsers.filter((user) => user.toLowerCase().includes(action.payload.toLowerCase())),
+                // filteredUsers: state.originalUsers.filter((user) => user.name.toLowerCase().includes(action.payload.toLowerCase())),
+                filteredUsers: state.originalUsers.filter((user) => user.name.toLowerCase().includes(action.payload.toLowerCase())),
+
                 filter: action.payload
             };
         default:
