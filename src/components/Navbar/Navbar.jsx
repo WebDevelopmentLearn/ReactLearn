@@ -100,6 +100,14 @@ export function Navbar() {
                                 isActive ? styles.active : styles.navLink
                             }>{lang === "ru" ? "Профиль пользователя" : "User Profile"}
                         </NavLink>
+
+                        <NavLink
+                            to={"/materialui"}
+                            className={({isActive}) =>
+                                isActive ? styles.active : styles.navLink
+                            }>{lang === "ru" ? "MaterialUI" : "MaterialUI"}
+                        </NavLink>
+
                     </div>
 
                 </ul>

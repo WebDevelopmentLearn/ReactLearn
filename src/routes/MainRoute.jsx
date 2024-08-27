@@ -10,7 +10,8 @@ import {
     Notes,
     Timer,
     TodoList,
-    UserProfile
+    UserProfile,
+    MaterialUI
 } from "../components";
 import Counter from "../components/Counter/Counter";
 
@@ -27,4 +28,5 @@ export const MainRoute = () => <Routes>
     <Route path="/counter" element={<Counter />} />
     <Route path="/notes" element={<Notes />} />
     <Route path="/userprofile" element={<UserProfile />} />
+    <Route path="/materialui" element={<MaterialUI />} />
 </Routes>

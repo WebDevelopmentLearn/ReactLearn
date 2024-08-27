@@ -10,3 +10,4 @@ export {Timer} from "./Timer/Timer";
 export {Modal} from "./Modal/Modal";
 export {TodoList} from "./TodoList/TodoList";
 export {UserProfile} from "./UserProfile/UserProfile";
+export {MaterialUI} from "./MaterialUI/MaterialUI";
