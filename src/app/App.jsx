@@ -1,20 +1,13 @@
 import './App.css';
+import {Theme} from "../context/theme";
+import {MaterialUI} from "../components/MaterialUI/MaterialUI";
 
-import {MainRoute} from "../routes/MainRoute";
-import {useState} from "react";
-import LangContext from "../context/LangContext";
 
 function App() {
-    const [lang, setLang] = useState("ru");
-    console.log(lang)
     return (
-        <div className="App">
-            <LangContext.Provider value={{lang, setLang}}>
-                <MainRoute />
-            </LangContext.Provider>
-
-
-        </div>
+        <Theme>
+            <MaterialUI />
+        </Theme>
     );
 }
 
