@@ -63,12 +63,6 @@ export function Navbar() {
                             }>{lang === "ru" ? "Посты" : "Posts"}
                         </NavLink>
                         <NavLink
-                            to={"/counter"}
-                            className={({isActive}) =>
-                                isActive ? styles.active : styles.navLink
-                            }>{lang === "ru" ? "Счетчик" : "Counter"}
-                        </NavLink>
-                        <NavLink
                             to={"/timer"}
                             className={({isActive}) =>
                                 isActive ? styles.active : styles.navLink
@@ -79,33 +73,6 @@ export function Navbar() {
                             className={({isActive}) =>
                                 isActive ? styles.active : styles.navLink
                             }>{lang === "ru" ? "Список пользователей" : "Users List"}
-                        </NavLink>
-                        <NavLink
-                            to={"/todolist"}
-                            className={({isActive}) =>
-                                isActive ? styles.active : styles.navLink
-                            }>{lang === "ru" ? "Список дел" : "Todo List"}
-                        </NavLink>
-
-                        <NavLink
-                            to={"/notes"}
-                            className={({isActive}) =>
-                                isActive ? styles.active : styles.navLink
-                            }>{lang === "ru" ? "Заметки" : "Notes"}
-                        </NavLink>
-
-                        <NavLink
-                            to={"/userprofile"}
-                            className={({isActive}) =>
-                                isActive ? styles.active : styles.navLink
-                            }>{lang === "ru" ? "Профиль пользователя" : "User Profile"}
-                        </NavLink>
-
-                        <NavLink
-                            to={"/materialui"}
-                            className={({isActive}) =>
-                                isActive ? styles.active : styles.navLink
-                            }>{lang === "ru" ? "MaterialUI" : "MaterialUI"}
                         </NavLink>
 
                     </div>

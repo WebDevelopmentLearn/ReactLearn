@@ -20,22 +20,43 @@
   }
 }
 
+
+.addUserInput {
+  padding: 10px;
+  margin-right: 4px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  transition: border 0.3s;
+  &:focus {
+    outline: 2px solid #6c52d9;
+  }
+}
+
+
 .userContainer {
-  width: 100px;
+  //width: 100px;
   display: flex;
   justify-content: space-between;
+  gap: 8px;
   align-items: center;
   padding: 10px 20px;
   border-radius: 16px;
   border: 1px solid #ccc;
 
-  transition: background-color 0.3s, color 0.3s;
+  //transition: background-color 0.3s, color 0.3s;
+  //
+  //&:hover {
+  //  background-color: #f0f0f0;
+  //  color: #000000;
+  //}
+
+  p {
+    font-size: 20px;
+  }
 }
 
-.userContainer:hover {
-  background-color: #f0f0f0;
-  color: #000000;
-}
+
 
 .btn {
   background-color: #6c52d9;
@@ -51,4 +72,21 @@
 
 .btn:hover {
   background-color: #7354f9;
+}
+
+
+.btnDelete {
+  background-color: #b12e2e;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btnDelete:hover {
+  background-color: #e32e2e;
 }
