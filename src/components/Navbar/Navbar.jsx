@@ -75,6 +75,12 @@ export function Navbar() {
                             }>{lang === "ru" ? "Список пользователей" : "Users List"}
                         </NavLink>
 
+                        <NavLink
+                            to={"/questions"}
+                            className={({isActive}) =>
+                                isActive ? styles.active : styles.navLink
+                            }>{lang === "ru" ? "Опросник" : "Questionnaire"}
+                        </NavLink>
                     </div>
 
                 </ul>
