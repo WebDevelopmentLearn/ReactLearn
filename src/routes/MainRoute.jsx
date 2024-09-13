@@ -7,7 +7,7 @@ import {
     Post,
     ValueDisplay,
     UsersList,
-    Timer, Questionnaire,
+    Timer, Questionnaire, Quote,
 } from "../components";
 
 export const MainRoute = () => <Routes>
@@ -20,4 +20,5 @@ export const MainRoute = () => <Routes>
     <Route path="/userslist" element={<UsersList />} />
     <Route path="/timer" element={<Timer />} />
     <Route path="/questions" element={<Questionnaire />} />
+    <Route path="/quote" element={<Quote />} />
 </Routes>

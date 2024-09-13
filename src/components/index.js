@@ -8,3 +8,4 @@ export {UsersList} from "./UsersList/UsersList";
 export {Timer} from "./Timer/Timer";
 export {Modal} from "./Modal/Modal";
 export {Questionnaire} from "./Questionnaire/Questionnaire";
+export {Quote} from "./Quote/Quote";
