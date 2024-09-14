@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# React Домашнее задание 18
+#### Создайте компонент `Contacts.js`, который будет отображать контактную информацию и форму для обратной связи.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### 1. Создание файла Contacts.js
+#### Перейдите в директорию `src/components`.
+#### Создайте новую папку с названием `Contacts`.
+#### Внутри папки `Contacts` создайте файл `Contacts.js`.
 
-In the project directory, you can run:
 
-### `npm start`
+### 2. Импорт необходимых зависимостей
+#### Откройте файл `Contacts.js`.
+#### Импортируйте следующие зависимости:
+- `React` из библиотеки `react`.
+- Логотипы социальных сетей (Snapchat, Facebook, X) из директории `assets`.
+- Стили из файла `Contacts.module.css`.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 3. Создание компонента Contacts
+#### Создайте функциональный компонент:
+- Определите компонент `Contacts` с помощью стрелочной функции.
+#### Структура JSX:
+- Создайте основной контейнер для секции контактов с тегом `<section>`.
+- Внутри секции создайте два `<div>` элемента:
+    - Первый `<div>` для отображения заголовка, контактной информации и формы.
+    - Второй `<div>` для отображения ссылок на социальные сети.
 
-### `npm test`
+#### Добавьте заголовок и контактную информацию:
+- В первом `<div>` добавьте заголовок `<h1>` с текстом "Контакты".
+- Добавьте список `<ul>`, содержащий два элемента `<li>` для номера телефона и адреса электронной почты.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Создайте форму для обратной связи:
+- Внутри первого `<div>` добавьте элемент `<form>`.
+- В форме создайте три поля ввода (`<input>`) с соответствующими плейсхолдерами для электронной почты, имени и сообщения.
+- Добавьте кнопку `<button>` с типом `submit` и текстом "Отправить".
 
-### `npm run build`
+#### Добавьте ссылки на социальные сети:
+- Во втором `<div>` добавьте текст "Найдите нас на:".
+- Создайте три ссылки (`<a>`) для каждого логотипа социальной сети.
+- Внутри каждой ссылки добавьте изображение (`<img>`), используя импортированные логотипы.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 4. Создание файла стилей Contacts.module.css
+#### Внутри папки `Contacts` создайте файл `Contacts.module.css`.
+#### Добавьте стили для компонента `Contacts`, чтобы он соответствовал макету.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### 5. Импорт и настройка маршрута в App.js
+#### Перейдите в файл `App.js`.
+#### Импортируйте компонент `Contacts` из директории `Contacts`.
+#### В компоненте `Routes` замените временный текст "Контакты" на компонент `<Contacts />` для маршрута `/contacts`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![hw18](hw18_example.png)
