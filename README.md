@@ -52,5 +52,4 @@
 #### Создайте CSS-файлы для каждого компонента и определите стили для элементов внутри компонентов.
 #### Импортируйте и примените созданные стили к компонентам.
 
-![hw20](https://lh7-eu.googleusercontent.com/docsz/AD_4nXes_y-ed8fsCE344ZhiOF132-xPLK39DmcxN5btuoTHtWmMfzlMk2Jza2gSXSyQVl42hYXgAa8WrdPVAGaxrg7gxkbC1cD27-bJPTWzRX8UMhIUsdvqVPN1wa2AfYaf8kxdpaIXF1oWMi3HnK5IivThljH9?key=x8-GTITtJpsXNMYc7Lmt5g)
-
+![hw21](img.png)
