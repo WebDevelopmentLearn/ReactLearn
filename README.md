@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# React Домашнее задание 17
+#### Приложение с переключением тем с использованием Material UI и Emotion
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### 1. Создание нового проекта React
+#### Откройте терминал и создайте новое React-приложение: `npx create-react-app theme-toggle-app`
+#### Перейдите в директорию проекта: `cd theme-toggle-app`
 
-In the project directory, you can run:
 
-### `npm start`
+### 2. Установка необходимых зависимостей
+#### Установите Material UI и Emotion:
+`npm install @mui/material @emotion/react @emotion/styled`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 3. Создание темы
+#### Откройте файл `App.js` в вашем текстовом редакторе.
+#### Импортируйте необходимые модули из Material UI для создания и предоставления темы:
+- `ThemeProvider` для предоставления темы всему приложению.
+- `createTheme` для создания кастомной темы.
+- `CssBaseline` для нормализации базовых стилей по умолчанию.
 
-### `npm test`
+#### Создайте светлую и тёмную темы:
+- Определите палитру цветов для светлой темы.
+- Определите палитру цветов для тёмной темы.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### 4. Стилизация компонентов с помощью Emotion
+#### Импортируйте `styled` из Emotion.
+#### Создайте стилизованную кнопку:
+#### Определите стили для кнопки, такие как цвет фона, цвет текста, радиус границы и состояние при наведении.
+#### Используйте тему для получения цветов.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 5. Создание функциональности для переключения темы
+#### Создайте функциональный компонент `App`.
+#### Используйте состояние (`useState`) для отслеживания текущего режима темы (светлый или тёмный).
+#### Создайте функцию для переключения между светлой и тёмной темой.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### 6. Рендеринг компонентов
+#### Оберните основной контент приложения в компонент `ThemeProvider`, передав ему текущую тему.
+#### Включите компонент `CssBaseline` для нормализации базовых стилей.
+#### Добавьте заголовок (`Typography`), который будет изменять текст в зависимости от текущей темы.
+#### Добавьте стилизованную кнопку, которая будет изменять тему при нажатии.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 7. Запуск приложения
+#### Запустите приложение командой:
+`npm start`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![hw17](hw17_example.png)
