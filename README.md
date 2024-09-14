@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# React Домашнее задание 15
+#### Оптимизация списка фильтрации
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### 1. Создание нового React-приложения:
+#### Создайте новый проект React или используйте существующий.
 
-In the project directory, you can run:
 
-### `npm start`
+### 2. Создание компонента списка пользователей:
+#### Создайте функциональный компонент `UserList`, который будет отображать список пользователей.
+#### Принимайте в качестве пропса массив объектов пользователей.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 3. Инициализация списка пользователей:
+#### Создайте массив объектов пользователей `userList` с несколькими пользователями. Каждый объект должен содержать поля `id` и `name`.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 4. Создание состояния для фильтрации:
+#### Используйте хук `useState`, чтобы создать состояние `filter`, которое будет хранить текст фильтрации.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 5. Функция фильтрации пользователей:
+#### Создайте функцию `filterUsers`, которая принимает текст фильтрации и возвращает отфильтрованный список пользователей."
+#### Функция должна фильтровать пользователей по имени, игнорируя регистр.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 6. Мемоизация функции фильтрации:
+#### Мемоизируйте функцию `filterUsers` с помощью хука `useCallback`, чтобы она не пересоздавалась при каждом рендере.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 7. Мемоизация отфильтрованного списка:
+#### Используйте хук `useMemo`, чтобы мемоизировать отфильтрованный список пользователей.
+#### Зависимостью `useMemo` должны быть состояние `filter` и функция `filterUsers`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 8. Разметка JSX:
+#### Создайте разметку JSX для приложения, включая поле ввода для фильтрации и компонент `UserList`.
+#### Передайте отфильтрованный список пользователей в компонент `UserList`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+### 9. Тестирование:
+#### Запустите ваше приложение и проверьте, что фильтрация пользователей работает корректно.
+#### Убедитесь, что список пользователей перерендеривается только при изменении текста фильтра.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
