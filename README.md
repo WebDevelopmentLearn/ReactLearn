@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# React Домашнее задание 14
+#### Создание приложения для управления состоянием пользователя с использованием React и Redux:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### 1. Создание проекта
+#### Создайте новый проект React.
+#### Установите Redux и React-Redux: `npm install redux react-redux`
 
-In the project directory, you can run:
 
-### `npm start`
+### 2. Настройка Redux
+#### Создайте папку для Redux файлов:
+- В корневой папке проекта создайте папку `redux` и внутри неё создайте файлы `store.js`, `actions.js` и `reducers.js`.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Создание и настройка Redux store:
+- В `store.js` импортируйте `createStore` из Redux.
+- Импортируйте корневой редьюсер.
+- Создайте и экспортируйте Redux store.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### Создание действий (actions):
+- В `actions.js` определите тип действия (`SET_USER_INFO`).
+- Создайте и экспортируйте функцию создателя действия (action creator) для обновления информации о пользователе (`setUserInfo`).
 
-### `npm test`
+#### Создание редьюсера (reducer):
+- В `reducers.js` определите начальное состояние (initial state), содержащее имя и статус пользователя.
+- Создайте и экспортируйте редьюсер для обработки действия обновления информации о пользователе.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### 3. Настройка компонентов React
+#### Создайте структуру компонентов:
+- В корневой папке `src` создайте два файла: `User.js` и `UserForm.js`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Создание компонента User:
+- Импортируйте необходимые модули из React и Redux.
+- Создайте функциональный компонент `User`, который отображает имя и статус пользователя.
+- Используйте функцию `connect` из `react-redux` для подключения компонента к Redux store.
+- Определите функцию `mapStateToProps` для передачи состояния из Redux store в компоненты.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Создание компонента UserForm:
+- Импортируйте необходимые модули из React и Redux.
+- Создайте функциональный компонент `UserForm`, который содержит форму для изменения имени и статуса пользователя.
+- Определите локальные состояния для имени и статуса с помощью `useState`.
+- Создайте обработчик отправки формы, который вызывает действие `setUserInfo`.
+- Используйте функцию `connect` из `react-redux` для подключения компонента к Redux store.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### 4. Настройка основного компонента App
+#### Создайте и настройте главный компонент приложения:
+- В `App.js` импортируйте компоненты `Provider` из `react-redux`, `store`, `User` и `UserForm`.
+- Оберните компоненты `User` и `UserForm` в компонент `Provider` и передайте ему Redux store через prop `store`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 5. Тестирование и отладка
+#### Запустите приложение.
+#### Проверьте, что начальное состояние отображается правильно в компоненте `User`.**
+#### Измените имя и статус пользователя через форму в компоненте `UserForm` и убедитесь, что информация обновляется в компоненте `User`.**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 6. *Дополнительные улучшения
+#### Добавьте валидацию формы в компоненте `UserForm`.
+#### Стилизуйте компоненты для улучшения внешнего вида.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![hw14](hw14_example.png)
