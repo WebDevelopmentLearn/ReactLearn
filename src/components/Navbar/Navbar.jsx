@@ -37,60 +37,47 @@ export function Navbar() {
                         isActive ? styles.active : styles.navLink
                     }>{lang === "ru" ? "О нас" : "About us"}
                 </NavLink>
-                <ul
-                    className={`${styles.dropdown} ${isActive ? styles.active : ''} `}
-                    onClick={handleClick}>
-                    <button className={styles.dropbtn}>Другое
-                        <i className="fa fa-caret-down"></i>
-                    </button>
-                    <div className={styles.dropdown_content}>
-                        <NavLink
-                            to={"/valuedisplay"}
-                            className={({isActive}) =>
-                                isActive ? styles.active : styles.navLink
-                            }>{lang === "ru" ? "Отображение значений" : "Value Display"}
-                        </NavLink>
-                        <NavLink
-                            to={"/userslist"}
-                            className={({isActive}) =>
-                                isActive ? styles.active : styles.navLink
-                            }>{lang === "ru" ? "Список пользователей" : "Users List"}
-                        </NavLink>
-                        <NavLink
-                            to={"/posts/1"}
-                            className={({isActive}) =>
-                                isActive ? styles.active : styles.navLink
-                            }>{lang === "ru" ? "Посты" : "Posts"}
-                        </NavLink>
-                        <NavLink
-                            to={"/timer"}
-                            className={({isActive}) =>
-                                isActive ? styles.active : styles.navLink
-                            }>{lang === "ru" ? "Таймер" : "Timer"}
-                        </NavLink>
-                        <NavLink
-                            to={"/userslist"}
-                            className={({isActive}) =>
-                                isActive ? styles.active : styles.navLink
-                            }>{lang === "ru" ? "Список пользователей" : "Users List"}
-                        </NavLink>
 
-                        <NavLink
-                            to={"/questions"}
-                            className={({isActive}) =>
-                                isActive ? styles.active : styles.navLink
-                            }>{lang === "ru" ? "Опросник" : "Questionnaire"}
-                        </NavLink>
+                <NavLink
+                    to={"/register"}
+                    className={({isActive}) =>
+                        isActive ? styles.active : styles.navLink
+                    }>{lang === "ru" ? "Регистрация" : "Register"}
+                </NavLink>
 
-                        <NavLink
-                            to={"/quote"}
-                            className={({isActive}) =>
-                                isActive ? styles.active : styles.navLink
-                            }>{lang === "ru" ? "Цитата" : "Quote"}
-                        </NavLink>
-                    </div>
+                <NavLink
+                    to={"/login"}
+                    className={({isActive}) =>
+                        isActive ? styles.active : styles.navLink
+                    }>{lang === "ru" ? "Вход" : "Log In"}
+                </NavLink>
 
-                </ul>
+                <NavLink
+                    to={"/profile"}
+                    className={({isActive}) =>
+                        isActive ? styles.active : styles.navLink
+                    }>{lang === "ru" ? "Профиль" : "Profile"}
+                </NavLink>
+
+
+
+                {/*<ul*/}
+                {/*    className={`${styles.dropdown} ${isActive ? styles.active : ''} `}*/}
+                {/*    onClick={handleClick}>*/}
+                {/*    <button className={styles.dropbtn}>Другое*/}
+                {/*        <i className="fa fa-caret-down"></i>*/}
+                {/*    </button>*/}
+                {/*    <div className={styles.dropdown_content}>*/}
+                {/*        <NavLink*/}
+                {/*            to={"/register"}*/}
+                {/*            className={({isActive}) =>*/}
+                {/*                isActive ? styles.active : styles.navLink*/}
+                {/*            }>{lang === "ru" ? "Регистрация" : "Register"}*/}
+                {/*        </NavLink>*/}
+
+                {/*    </div>*/}
+
+                {/*</ul>*/}
 
             </div>
             <div className={styles.ProfileAndSwitchLangContainer}>

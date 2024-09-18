@@ -1,15 +1,10 @@
-import {combineReducers, configureStore} from "@reduxjs/toolkit";
+import {configureStore} from "@reduxjs/toolkit";
+import auth from "./authSlice";
+import {checkTokenExp} from "../middlewares/checkTokenExp";
 
-import {userReducer} from "./reducers/UserReducer";
-import questionnaireReducer from "./reducers/questionnaireSlice";
-import quoteReducer from "./reducers/quoteSlice";
-
-const mainReducer = combineReducers({
-    users: userReducer,
-    questionnaireReducer,
-    quoteReducer,
+export const store = configureStore({
+    reducer: {
+        auth
+    },
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(checkTokenExp)
 });
-
-export const appStore = configureStore({
-    reducer: mainReducer
-})

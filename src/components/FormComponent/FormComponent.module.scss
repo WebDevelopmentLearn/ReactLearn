@@ -1,0 +1,102 @@
+
+.FormComponentContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #808080;
+    padding: 16px;
+    border-radius: 16px;
+
+}
+
+.FormInputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+
+}
+
+.emailInput, .passwordInput {
+    padding: 6px 8px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+
+    transition: outline 0.3s;
+
+    &:focus {
+        outline: 2px solid #6c52d9;
+    }
+}
+
+.rememberMeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+
+
+}
+
+.rememberMe:checked {
+    accent-color: #6c52d9;
+}
+
+.btn {
+    background-color: #6c52d9;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #7354f9;
+}
+
+.btn:disabled {
+    background-color: #a6a6a6;
+    cursor: not-allowed;
+}
+
+
+//Loader
+
+//<div class="container"></div>
+.loader {
+    --uib-size: 20px;
+    --uib-color: black;
+    --uib-speed: .9s;
+    --uib-stroke: 5px;
+    --mask-size: calc(var(--uib-size) / 2 - var(--uib-stroke));
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: var(--uib-size);
+    width: var(--uib-size);
+    -webkit-mask: radial-gradient(circle var(--mask-size), transparent 99%, #000 100%);
+    mask: radial-gradient(circle var(--mask-size), transparent 99%, #000 100%);
+    background-image: conic-gradient(transparent 25%, var(--uib-color));
+    animation: spin calc(var(--uib-speed)) linear infinite;
+    border-radius: 50%;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
