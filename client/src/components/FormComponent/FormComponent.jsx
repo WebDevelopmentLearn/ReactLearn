@@ -1,4 +1,4 @@
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {login, register} from "../../store/actionCreators";
 
@@ -24,28 +24,67 @@ export const FormComponent = ({page}) => {
     const dispatch = useDispatch();
     const {status, error} = useSelector((state) => state.auth);
     const navigate = useNavigate();
+    const [isSuccess, setIsSuccess] = useState(false);
+    // const submitForm = (data) => {
+    //     if (page === "register") {
+    //         dispatch(register({email: data.email, password: data.password})); // Используем данные напрямую из формы
+    //         if (status === "FAILED") {
+    //             alert("Registration failed");
+    //         } else {
+    //             alert("Registration success");
+    //         }
+    //     } else {
+    //         dispatch(login({email: data.email, password: data.password}));
+    //         if (status === "FAILED") {
+    //             alert("Login failed");
+    //
+    //         } else {
+    //             alert("Login success");
+    //             navigate("/profile");
+    //         }
+    //     }
+    //     reset(defaultUser);
+    // };
 
-    const submitForm = (data) => {
+    const submitForm = async (data) => {
+
+        const user = {email: data.email, password: data.password};
         if (page === "register") {
-            dispatch(register({email: data.email, password: data.password})); // Используем данные напрямую из формы
+            await dispatch(register(user));
+            setIsSuccess(true);
+            alert("Registration success");
         } else {
-            dispatch(login({email: data.email, password: data.password}));
+            await dispatch(login(user));
+            setIsSuccess(true);
+            alert("Login success");
         }
         reset(defaultUser);
-        if (page === "login") {
-            navigate("/profile");
-        }
     };
+
+
+    useEffect(() => {
+        if (isSuccess) {
+            if (!error) {
+                if (page === "register") {
+                    navigate("/login");
+                    setIsSuccess(false);
+                } else {
+                    setTimeout(() => {
+                        setIsSuccess(false)
+                        navigate("/profile")
+                    }, 600);
+                }
+            } else {
+                setIsSuccess(false)
+            }
+
+        }
+    }, [isSuccess]);
 
     const passwordInput = watch("password");
 
     useEffect(() => {
         const repeatPassSubscription = watch((data) => {
-            // if (data.passwordInput !== data.repeatPasswordInput) {
-            //     setPasswordsMatch(false);
-            // } else {
-            //     setPasswordsMatch(true);
-            // }
         });
         return () => repeatPassSubscription.unsubscribe();
     }, [watch]);
@@ -65,18 +104,31 @@ export const FormComponent = ({page}) => {
                 />
                 {errors.emailInput && <p>{errors.emailInput.message}</p>}
 
-                <input
-                    {...registerField("password", {
-                        required: "Password is required",
-                        minLength: {
-                            value: 6,
-                            message: "Password must be at least 6 characters"
-                        }
-                    })}
-                    className={styles.passwordInput}
-                    type="password"
-                    placeholder="Password"
-                />
+                {page === "register" && (
+                    <input
+                        {...registerField("password", {
+                            required: "Password is required",
+                            minLength: {
+                                value: 6,
+                                message: "Password must be at least 6 characters"
+                            }
+                        })}
+                        className={styles.passwordInput}
+                        type="password"
+                        placeholder="Password"
+                    />
+                )}
+
+                {page === "login" && (
+                    <input
+                        {...registerField("password", {
+                            required: "Password is required",
+                        })}
+                        className={styles.passwordInput}
+                        type="password"
+                        placeholder="Password"
+                    />
+                )}
                 {errors.passwordInput && <p>{errors.passwordInput.message}</p>}
 
                 {page === "register" && (
